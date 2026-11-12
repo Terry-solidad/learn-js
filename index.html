@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Bulb and Window Print</title>
     <style>
+        
         body {
             background-color: #111827;
             color: white;
@@ -42,34 +43,108 @@
         </style>
 </head>
 <body>
+    <div class="dashboard">
+        <!--Desktop Sidebar-->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            
+                <a href="#home">🏠Home</a>
+                <a href="#bulb">💡Bulb</a>
+                <a href="#print">🖨️Print</a>
+                <a href="#link">🔗Link</a>
+            
+            </aside>
 
-    <h2>What can JavaScript do?</h2>
+            <!-- Main Dashboard  -->
 
-    <p>JavaScript can change HTML attribute values.</p>
+            <main class="main">
+                <h1>Welcome to My Dashboard</h1>
+                <p>My JavaScript learning space.</p>
+    </div>
 
-    <p>JavaScript can change the source of an image.</p>
+    <header class="topbar" id="home">
+        <div>
+            <h1>Welcome to My Dashboard</h1>
+            <p>My JavaScript learning space.</p>
+        </div>
+        
 
-    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">
-        Turn on the light
-    </button>
+    </header>
 
-    <img
-        id="myImage"
-        src="https://www.w3schools.com/js/pic_bulboff.gif"
-        style="width:100px"
-        alt="Light bulb"
-    >
+    <!--Mobile Navigation-->
+    <nav class="mobile-nav">
+        <a href="#home">🏠Home</a>
+        <a href="#bulb">💡Bulb</a>
+        <a href="#print">🖨️Print</a>
+        <a href="#link">🔗Link</a>
+    </nav>
 
-    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">
-        Turn off the light
-    </button>
+    <section class="cards">
+        <!--Light Bulb-->
+         <div class="card" id="bulb">
+            <h3>💡 JavaScript Light Bulb</h3>
+            <p>Use JavaScript to turn a light on and off.</p>
 
-    <!-- Window Print Example -->
-    <h2>JavaScript Window Print</h2>
+            <img 
+            id="myImage"
+            src="https://www.w3schools.com/js/pic_bulboff.gif"
+            alt="Light bulb"
+            >
 
-    <p>Click the button below to print this page.</p>
+            <div class="bulb-buttons">
+                <button
+                onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">
+                    Turn ON
+                </button>
+                <button
+                onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">
+                    Turn OFF
+                </button>
+            </div>
+        
+        </div>
 
-    <button onclick="window.print()">Print this page</button>
+        <!--print-->
+          <div class="card" id="print">
+                <h3>🖨️ Window Print</h3>
+                <p>Click the button below to print this page.</p>
+    
+                <button onclick="window.print()">Print this page</button>     
+            </div>
+            
+            <!--Useful Links-->
+            <div class="card" id="link">
+                <h3>🌎W3Schools</h3>
+                <p>Learn HTML, CSS, and JavaScript.</p>
 
+                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools</a>
+            </div>
+            <div class="card">
+                <h3>👩‍🎓JavaScript Tutorial</h3>
+                <p>Practice JavaScript and improve your coding skills.</p>
+
+                <a href="https://www.w3schools.com/js/" target="_blank">Learn JavaScript</a>
+
+            </div>
+
+            <div class="card">
+                <h3>📚CSS Tutorial</h3>
+                <p>Learn CSS and improve your styling skills.</p>
+
+                <a href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+            </div>
+
+            <div class="card">
+                <h3>📝HTML Tutorial</h3>
+                <p>Learn HTML and improve your web development skills.</p>
+
+                <a href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+            </div>
+
+        </section>
+
+</main>
+
+</div>
 </body>
 </html>
